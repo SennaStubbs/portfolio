@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inria+Sans">
+        <link rel="stylesheet" href="/bean-and-brew-design/styles.css">
+        <script src="/bean-and-brew-design/scripts.js"></script>
+        <title>Order | Bean & Brew</title>
+        <link rel="icon" type="image/x-icon" href="/bean-and-brew-design/images/logo/favicon.ico">
+
+        <!-- LOAD NAVBAR + FOOTER -->
+        <script
+            src="https://code.jquery.com/jquery-3.3.1.js"
+            integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+            crossorigin="anonymous">
+        </script>
+        <script> 
+            $(function(){
+                $("header").load("/bean-and-brew-design/header.html"); 
+                $("footer").load("/bean-and-brew-design/footer.html"); 
+            });
+        </script> 
+    </head>
+    <body>
+        <!-- NAV BAR -->
+        <header></header>
+
+        <!-- PAGE CONTENT -->
+        <main>
+            <h1>Order</h1>
+            <div class="order-panel">
+                <p>Items:</p>
+                <ul>
+                    <li><a>Crumpets x1</a><span class="price">| £1.99 (1 x £1.99)</span></li>
+                    <li><a>Cappuccino x2</a><span class="price">| £3.98 (2 x £1.99)</span></li>
+                    <li><a>Milk x1</a><span class="price">| £1.79 (1 x £1.79)</span></li>
+                    <li><a>Latte x3</a><span class="price">| £5.97 (3 x £1.99)</span></li>
+                </ul>
+                <hr>
+                <p class="total"><strong>Total: £13.73</strong></p>
+            </div>
+            <button class="button">Add Item</button>
+            <button class="button">Checkout</button>
+        </main>
+        
+        <!-- FOOTER -->
+        <footer></footer>
+    </body>
+</html>

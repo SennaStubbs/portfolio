@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inria+Sans">
+        <link rel="stylesheet" href="/bean-and-brew-design/styles.css">
+        <script src="/bean-and-brew-design/scripts.js"></script>
+        <title>Menu | Bean & Brew</title>
+        <link rel="icon" type="image/x-icon" href="/bean-and-brew-design/bean-and-brew-design/images/logo/favicon.ico">
+
+        <!-- LOAD NAVBAR + FOOTER -->
+        <script
+            src="https://code.jquery.com/jquery-3.3.1.js"
+            integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+            crossorigin="anonymous">
+        </script>
+        <script> 
+            $(function(){
+                $("header").load("/bean-and-brew-design/header.html"); 
+                $("footer").load("/bean-and-brew-design/footer.html"); 
+            });
+        </script> 
+    </head>
+    <body>
+        <!-- NAV BAR -->
+        <header></header>
+
+        <!-- PAGE CONTENT -->
+        <main>
+            <div class="menu-container">
+                <div class="menu-buttons">
+                    <h1>Categories</h1>
+                    <a onclick="showMenu(this.id)" id="hot-drinks" class="active"><span>Hot Drinks</span></a>
+                    <a onclick="showMenu(this.id)" id="cold-drinks"><span>Cold Drinks</span></a>
+                    <a onclick="showMenu(this.id)" id="bottled-drinks"><span>Bottled Drinks</span></a>
+                    <br>
+                    <a onclick="showMenu(this.id)" id="breakfast"><span>Breakfast</span></a>
+                    <a onclick="showMenu(this.id)" id="sandwiches"><span>Sandwiches</span></a>
+                    <a onclick="showMenu(this.id)" id="snacks"><span>Snacks</span></a>
+                </div>
+                <hr>
+                <div class="menu-items">
+                    <h1>Menu Items</h1>
+                    <div id="hot-drinks-menu" class="menu">
+                        <h2>Hot Drinks</h2>
+                        <div>
+                            <button style="background-image:  url('/bean-and-brew-design/bean-and-brew-design/images/menu/hot_drinks/cappuccino.jpg');">
+                                <div class="menu-item">
+                                    <h3>Cappuccino</h3>
+                                    <p>£1.99</p>
+                                </div>
+                            </button>
+                            <button style="background-image:  url('/bean-and-brew-design/bean-and-brew-design/images/menu/hot_drinks/latte.jpg');">
+                                <div class="menu-item">
+                                    <h3>Latte</h3>
+                                    <p>£1.99</p>
+                                </div>
+                            </button>
+                            <button style="background-image:  url('/bean-and-brew-design/images/menu/hot_drinks/hot_chocolate.jpg');">
+                                <div class="menu-item">
+                                    <h3>Hot Chocolate</h3>
+                                    <p>£2.29</p>
+                                </div>
+                            </button>
+                            <button style="background-image:  url('/bean-and-brew-design/images/menu/hot_drinks/pumpkin_spice_latte.jpg');">
+                                <div class="menu-item">
+                                    <h3>Pumpkin Spice Latte</h3>
+                                    <p>£2.99</p>
+                                </div>
+                            </button>
+                        </div>
+                    </div>
+                    <div id="cold-drinks-menu" class="menu">
+                        <h2>Cold Drinks</h2>
+                        <div>
+                            <button style="background-image:  url('/bean-and-brew-design/images/menu/cold_drinks/lemonade.jpg');">
+                                <div class="menu-item">
+                                    <h3>Lemonade</h3>
+                                    <p>£1.79 | 250ml</p>
+                                </div>
+                            </button>
+                            <button style="background-image:  url('/bean-and-brew-design/images/menu/cold_drinks/milk.jpg');">
+                                <div class="menu-item">
+                                    <h3>Milk</h3>
+                                    <p>£1.79 | 250ml</p>
+                                </div>
+                            </button>
+                        </div>
+                    </div>
+                    <div id="bottled-drinks-menu" class="menu">
+                        <h2>Bottled Drinks</h2>
+                        <div>
+                            <button style="background-image:  url('/bean-and-brew-design/images/menu/bottled_drinks/smartwater_still_600ml.jpg');">
+                                <div class="menu-item">
+                                    <h3>Smartwater Still</h3>
+                                    <p>£1.49 | 600ml</p>
+                                </div>
+                            </button>
+                            <button style="background-image:  url('/bean-and-brew-design/images/menu/bottled_drinks/tropicana_orange_smooth_250ml.jpg');">
+                                <div class="menu-item">
+                                    <h3>Tropicana Smooth Orange</h3>
+                                    <p>£1.79 | 250ml</p>
+                                </div>
+                            </button>
+                            <button style="background-image:  url('/bean-and-brew-design/images/menu/bottled_drinks/tropicana_orange_with_bits_250ml.jpg');">
+                                <div class="menu-item">
+                                    <h3>Tropicana Orange With Bits</h3>
+                                    <p>£1.79 | 250ml</p>
+                                </div>
+                            </button>
+                        </div>
+                    </div>
+                    <div id="breakfast-menu" class="menu">
+                        <h2>Breakfast</h2>
+                        <div>
+                            <button style="background-image:  url('/bean-and-brew-design/images/Picture11.jpg');">
+                                <div class="menu-item">
+                                    <h3>cool item</h3>
+                                    <p>£2.99</p>
+                                </div>
+                            </button>
+                        </div>
+                    </div>
+                    <div id="sandwiches-menu" class="menu">
+                        <h2>Sandwiches</h2>
+                        <div>
+                            <button style="background-image:  url('/bean-and-brew-design/images/Picture11.jpg');">
+                                <div class="menu-item">
+                                    <h3>cool item</h3>
+                                    <p>£2.99</p>
+                                </div>
+                            </button>
+                        </div>
+                    </div>
+                    <div id="snacks-menu" class="menu">
+                        <h2>Snacks</h2>
+                        <div>
+                            <button style="background-image:  url('/bean-and-brew-design/images/menu/snacks/pumpkin_pie.jpg');">
+                                <div class="menu-item">
+                                    <h3>Pumpkin Pie Slice</h3>
+                                    <p>£3.99</p>
+                                </div>
+                            </button>
+                            <button style="background-image:  url('/bean-and-brew-design/images/menu/snacks/spooky_treats.jpg');">
+                                <div class="menu-item">
+                                    <h3>Spooky Treats</h3>
+                                    <p>£2.49</p>
+                                </div>
+                            </button>
+                            <button style="background-image:  url('/bean-and-brew-design/images/Picture11.jpg');">
+                                <div class="menu-item">
+                                    <h3>cool item</h3>
+                                    <p>£2.99</p>
+                                </div>
+                            </button>
+                            <button style="background-image:  url('/bean-and-brew-design/images/Picture11.jpg');">
+                                <div class="menu-item">
+                                    <h3>cool item</h3>
+                                    <p>£2.99</p>
+                                </div>
+                            </button>
+                            <button style="background-image:  url('/bean-and-brew-design/images/Picture11.jpg');">
+                                <div class="menu-item">
+                                    <h3>cool item</h3>
+                                    <p>£2.99</p>
+                                </div>
+                            </button>
+                            <button style="background-image:  url('/bean-and-brew-design/images/Picture11.jpg');">
+                                <div class="menu-item">
+                                    <h3>cool item</h3>
+                                    <p>£2.99</p>
+                                </div>
+                            </button>
+                            <button style="background-image:  url('/bean-and-brew-design/images/Picture11.jpg');">
+                                <div class="menu-item">
+                                    <h3>cool item</h3>
+                                    <p>£2.99</p>
+                                </div>
+                            </button>
+                            <button style="background-image:  url('/bean-and-brew-design/images/Picture11.jpg');">
+                                <div class="menu-item">
+                                    <h3>cool item</h3>
+                                    <p>£2.99</p>
+                                </div>
+                            </button>
+                            <button style="background-image:  url('/bean-and-brew-design/images/Picture11.jpg');">
+                                <div class="menu-item">
+                                    <h3>cool item</h3>
+                                    <p>£2.99</p>
+                                </div>
+                            </button>
+                            <button style="background-image:  url('/bean-and-brew-design/images/Picture11.jpg');">
+                                <div class="menu-item">
+                                    <h3>cool item</h3>
+                                    <p>£2.99</p>
+                                </div>
+                            </button>
+                            <button style="background-image:  url('/bean-and-brew-design/images/Picture11.jpg');">
+                                <div class="menu-item">
+                                    <h3>cool item</h3>
+                                    <p>£2.99</p>
+                                </div>
+                            </button>
+                            <button style="background-image:  url('/bean-and-brew-design/images/Picture11.jpg');">
+                                <div class="menu-item">
+                                    <h3>cool item</h3>
+                                    <p>£2.99</p>
+                                </div>
+                            </button>
+                            <button style="background-image:  url('/bean-and-brew-design/images/Picture11.jpg');">
+                                <div class="menu-item">
+                                    <h3>cool item</h3>
+                                    <p>£2.99</p>
+                                </div>
+                            </button>
+                            <button style="background-image:  url('/bean-and-brew-design/images/Picture11.jpg');">
+                                <div class="menu-item">
+                                    <h3>cool item</h3>
+                                    <p>£2.99</p>
+                                </div>
+                            </button>
+                            <button style="background-image:  url('/bean-and-brew-design/images/Picture11.jpg');">
+                                <div class="menu-item">
+                                    <h3>cool item</h3>
+                                    <p>£2.99</p>
+                                </div>
+                            </button>
+                            <button style="background-image:  url('/bean-and-brew-design/images/Picture11.jpg');">
+                                <div class="menu-item">
+                                    <h3>cool item</h3>
+                                    <p>£2.99</p>
+                                </div>
+                            </button>
+                            <button style="background-image:  url('/bean-and-brew-design/images/Picture11.jpg');">
+                                <div class="menu-item">
+                                    <h3>cool item</h3>
+                                    <p>£2.99</p>
+                                </div>
+                            </button>
+                            <button style="background-image:  url('/bean-and-brew-design/images/Picture11.jpg');">
+                                <div class="menu-item">
+                                    <h3>cool item</h3>
+                                    <p>£2.99</p>
+                                </div>
+                            </button>
+                            <button style="background-image:  url('/bean-and-brew-design/images/Picture11.jpg');">
+                                <div class="menu-item">
+                                    <h3>cool item</h3>
+                                    <p>£2.99</p>
+                                </div>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- INITIATES SCRIPT -->
+            <script>
+                showMenu(currentMenu);
+            </script>
+        </main>
+
+        <!-- FOOTER -->
+        <footer></footer>
+    </body>
+</html>

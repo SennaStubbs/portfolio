@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inria+Sans">
+        <link rel="stylesheet" href="/bean-and-brew-design/styles.css">
+        <script src="/bean-and-brew-design/scripts.js"></script>
+        <title>Home | Bean & Brew</title>
+        <link rel="icon" type="image/x-icon" href="/bean-and-brew-design//bean-and-brew-design/images/logo/favicon.ico">
+
+        <!-- LOAD NAVBAR + FOOTER -->
+        <script
+            src="https://code.jquery.com/jquery-3.3.1.js"
+            integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+            crossorigin="anonymous">
+        </script>
+        <script> 
+            $(function(){
+                $("header").load("/bean-and-brew-design/header.html"); 
+                $("footer").load("/bean-and-brew-design/footer.html"); 
+            });
+        </script>
+    </head>
+    <body>
+        <!-- NAV BAR -->
+        <header></header>
+
+        <!-- PAGE CONTENT -->
+        <main>
+            <div class="offer-slideshow">
+                <div class="offer-button offer-left" onclick="previousSlide()"><span><</span></div>
+                <div class="offer-button offer-right" onclick="nextSlide()"><span>></span></div>
+                <div class="offer-dots">
+                    <button class="offer-dot" onclick="currentSlide(1)"></button>
+                    <button class="offer-dot" onclick="currentSlide(2)"></button>
+                    <button class="offer-dot" onclick="currentSlide(3)"></button>
+                    <button class="offer-dot" onclick="currentSlide(4)"></button>
+                </div>
+                <div class="offer-content">
+
+                </div>
+                <!-- need to change 'offer-images' to 'offer-slides' and all related classes -->
+                <div class="offer-slides">
+                    <div class="offer-slide">
+                        <img src="/bean-and-brew-design/images/Picture1.jpg">
+                        <div class="offer-content">
+                            <h1>New Drinks, New Offer!</h1>
+                            <p>Feel the autumn season with our new festive foods and drinks at your local outlet!</p>
+                            <a href="/bean-and-brew-design/pages/menu.html">Take a peek!</a>
+                        </div>
+                    </div>
+                    <div class="offer-slide">
+                        <img src="/bean-and-brew-design/images/offers/Offer1.jpg">
+                        <div class="offer-content">
+                            <h1>Super Duper Cool Offer!</h1>
+                            <p>This is a super cool offer! Check out its cool stuff: stuff. Yay!</p>
+                            <a href="#">Take a peek!</a>
+                        </div>
+                    </div>
+                    <div class="offer-slide">
+                        <img src="/bean-and-brew-design/images/offers/Offer2.webp">
+                        <div class="offer-content">
+                            <h1>Super Duper Cool Offer!</h1>
+                            <p>This is a super cool offer! Check out its cool stuff: stuff. Yay!</p>
+                            <a href="#">Take a peek!</a>
+                        </div>
+                    </div>
+                    <div class="offer-slide">
+                        <img src="/bean-and-brew-design/images/offers/Offer3.jpg">
+                        <div class="offer-content">
+                            <h1>Super Duper Cool Offer!</h1>
+                            <p>This is a super cool offer! Check out its cool stuff: stuff. Yay!</p>
+                            <a href="#">Take a peek!</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- INITIATES SCRIPT -->
+                <script>
+                    showSlides(slideIndex)
+                </script>
+            </div>
+
+            <!-- rows -->
+            <div class="row">
+                <div class="row-img">
+                    <img src="/bean-and-brew-design/images/Cappuccino_at_Sightglass_Coffee.jpg">
+                </div>
+                <div class="row-content">
+                    <h1>
+                        Variety With Our Foods And Drinks
+                    </h1>
+                    <p>
+                        Our inventory covers a whole range of food and beverages, and it often changes as
+                        the seasons do too. Prices stay reasonably low and affordable for anyone who is
+                        staying with friends or needs to be on the go.
+                    </p>
+                    <a href="/bean-and-brew-design/pages/menu.html">Check out what's available right now!</a>
+                </div>
+            </div>
+            <div class="row">
+                <div class="row-content">
+                    <h1>
+                        Made For Everyone
+                    </h1>
+                    <p>
+                        We make our products with the use of fair-trade coffee and all organic milk, ensuring
+                        that everything is healthy and properly managed for our precious customers. Our
+                        service is personalised for everyone!
+                    </p>
+                    <a href="#">Find out more!</a>
+                </div>
+                <div class="row-img">
+                    <img src="/bean-and-brew-design/images/Picture6.jpg">
+                </div>
+            </div>
+            <div class="row">
+                <div class="row-img">
+                    <img src="/bean-and-brew-design/images/Picture2.jpg">
+                </div>
+                <div class="row-content">
+                    <h1>
+                        Find Outlets Near You
+                    </h1>
+                    <p>
+                        We are starting to expand and open new outlets across the UK. We might even be
+                        opening an outlet near you!<br><br>
+                        Check our outlet map to see where the closest outlet is to you.
+                    </p>
+                    <a href="/bean-and-brew-design/pages/locations.html">Check out the outlet map!</a>
+                </div>
+            </div>
+        </main>
+
+        <!-- footer -->
+        <footer></footer>
+    </body>
+</html>

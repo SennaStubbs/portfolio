@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inria+Sans">
+        <link rel="stylesheet" href="/bean-and-brew-design/styles.css">
+        <script src="/bean-and-brew-design/scripts.js"></script>
+        <title>Sign Up | Bean & Brew</title>
+        <link rel="icon" type="image/x-icon" href="/bean-and-brew-design/images/logo/favicon.ico">
+
+        <!-- LOAD NAVBAR + FOOTER -->
+        <script
+            src="https://code.jquery.com/jquery-3.3.1.js"
+            integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+            crossorigin="anonymous">
+        </script>
+        <script> 
+            $(function(){
+                $("header").load("/bean-and-brew-design/header.html"); 
+                $("footer").load("/bean-and-brew-design/footer.html"); 
+            });
+        </script> 
+    </head>
+    <body>
+        <!-- NAV BAR -->
+        <header></header>
+
+        <!-- PAGE CONTENT -->
+        <main>
+           <div class="sign-in-container">
+                <div class="sign-in-panel">
+                    <h1>Join Us</h1>
+                    <label>Email:
+                        <br>
+                        <input id="email" placeholder="Enter email" type="email" autocomplete="off">
+                    </label>
+                    <br>
+                    <label>Password:
+                        <br>
+                        <input id="password" placeholder="Enter password" type="password" autocomplete="off">
+                        <a id="toggle-password" onclick="togglePassword()"><img src="/bean-and-brew-design/images/icons/not_visible.svg" draggable="false"></a>
+                    </label>
+                    <br>
+                    <label>Confirm Password:
+                        <br>
+                        <input id="confirm-password" placeholder="Enter password" type="password" name="off" autocomplete="off">
+                        <a id="toggle-confirm-password" onclick="toggleConfirmPassword()"><img src="/bean-and-brew-design/images/icons/not_visible.svg" draggable="false"></a>
+                    </label>
+                    <!-- INITIATES SCRIPT -->
+                    <script>
+                        togglePassword(hidden);
+                        toggleConfirmPassword(confirmHidden);
+                    </script>
+                    <p>
+                        Already a member? <a href="/bean-and-brew-design/pages/signin.html">Sign in</a>
+                    </p>
+                    <a href="#" class="button">Create Account</a>
+                </div>
+           </div>
+        </main>
+
+        <!-- FOOTER -->
+        <footer></footer>
+    </body>
+</html>
