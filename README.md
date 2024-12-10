@@ -1,4 +1,4 @@
-# Web Portfolio
+# portfolio
 A portfolio of my (personal) web projects with source code available.
 
 ## Projects Featured
