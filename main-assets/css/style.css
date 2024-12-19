@@ -11,7 +11,7 @@
 /* Main */
 html, body {
     /* background-color: var(--background-colour); */
-    background-image: url(https://themes.googleusercontent.com/image?id=0BwVBOzw_-hbMYWI3ZWVlMjEtNWFkMS00NWEyLThiYTAtMzFjZDcxZjgwMzU2);
+    background-image: url(/main-assets/images/google-background.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -23,15 +23,15 @@ html, body {
     margin: 0;
     padding: 0;
     color: var(--text-colour);
-    text-align: center;
+    text-align: left;
 }
 
-/* Header text */
+/* Text */
 h1 {
     font-weight: normal;
     font-size: 2em;
     margin: 16px 0 0 0;
-    padding: 0.8em 0;
+    padding: 0.8em 16px;
     border-top: 2px solid color-mix(in srgb, var(--text-colour), transparent 90%);
     border-bottom: 1px solid color-mix(in srgb, var(--text-colour), transparent 90%);
 }
@@ -44,9 +44,13 @@ h2 {
     font-weight: normal;
     font-size: 2em;
     margin: 0;
-    padding: 16px 0;
+    padding: 16px;
     border-top: 2px solid color-mix(in srgb, var(--text-colour), transparent 90%);
     border-bottom: 1px solid color-mix(in srgb, var(--text-colour), transparent 90%);
+}
+
+p {
+    padding: 0 32px;
 }
 
 /* Return to main page */
@@ -60,15 +64,26 @@ a.return {
     font-size: 20px;
     text-decoration: none;
 
-    transition: transform 0.5s ease;
+    width: fit-content;
+    margin: 0 auto;
+
+    transition: transform 0.3s ease;
+    -o-transition: transform var(--project-transition-time) ease;
+    -webkit-transition: transform var(--project-transition-time) ease;
+    -moz-transition: transform var(--project-transition-time) ease;
 }
 
 a.return:hover {
-    transform: scale(1.1)
+    transform: scale(1.1);
+    -o-transform: scale(1.1);
+    -ms-transform: scale(1.1);
+    -moz-transform: scale(1.1);
+    -webkit-transform: scale(1.1);
 }
 
 a.return p {
     margin: 0;
+    padding: 0;
 }
 
 a.return img {
@@ -118,8 +133,9 @@ p.copyright {
     grid-auto-columns: 3;
     gap: 10px;
 
-    padding: 32px 0 64px 0;
-    width: 100%;
+    padding: 32px 24px 64px 24px;
+    width: fit-content;
+    max-width: 100%;
 }
 
 /* Individual projects */
@@ -128,7 +144,6 @@ p.copyright {
 
     background-color: black;
 
-    float: left;
     width: 100%;
     height: 300px;
 
@@ -146,6 +161,9 @@ p.copyright {
 
     box-shadow: 0px 2px 3px 1px color-mix(in srgb, var(--text-colour) 20%, transparent);
     transition: box-shadow var(--project-transition-time) ease;
+    -o-transition: box-shadow var(--project-transition-time) ease;
+    -webkit-transition: box-shadow var(--project-transition-time) ease;
+    -moz-transition: box-shadow var(--project-transition-time) ease;
 }
 
 .project-container a:hover {
@@ -172,11 +190,18 @@ p.copyright {
 
     transform-origin: center center;
     transition: var(--project-transition-time) ease;
+    -o-transition: var(--project-transition-time) ease;
+    -webkit-transition: var(--project-transition-time) ease;
+    -moz-transition: var(--project-transition-time) ease;
     text-shadow: 0px 0px 1em white;
 }
 
 .project-container a:hover h3 {
     transform: scale(1.25);
+    -o-transform: scale(1.25);
+    -ms-transform: scale(1.25);
+    -moz-transform: scale(1.25);
+    -webkit-transform: scale(1.25);
     background-color: rgba(0, 0, 0, 0.5);
     box-shadow: 0px 0px 1em 1em rgba(0, 0, 0, 0.5);
 }
@@ -189,8 +214,12 @@ p.copyright {
     padding: 0;
     list-style: disc;
     color: transparent;
+    text-align: left;
 
     transition: var(--project-transition-time) ease;
+    -o-transition: var(--project-transition-time) ease;
+    -webkit-transition: var(--project-transition-time) ease;
+    -moz-transition: var(--project-transition-time) ease;
 }
 
 .project-container a:hover ul {
@@ -201,6 +230,9 @@ p.copyright {
 
 .project-container a ul li {
     transition: text-shadow var(--project-transition-time) ease;
+    -o-transition: text-shadow var(--project-transition-time) ease;
+    -webkit-transition: text-shadow var(--project-transition-time) ease;
+    -moz-transition: text-shadow var(--project-transition-time) ease;
 }
 
 .project-container a:hover ul li {
@@ -219,6 +251,9 @@ p.copyright {
     opacity: 0.2;
 
     transition: opacity var(--project-transition-time) ease;
+    -o-transition: opacity var(--project-transition-time) ease;
+    -webkit-transition: opacity var(--project-transition-time) ease;
+    -moz-transition: opacity var(--project-transition-time) ease;
 }
 
 .project-container a:hover .overlay {
@@ -241,9 +276,13 @@ p.copyright {
     background-position: center;
 
     transition: var(--project-transition-time) ease;
+    -o-transition: var(--project-transition-time) ease;
+    -webkit-transition: var(--project-transition-time) ease;
+    -moz-transition: var(--project-transition-time) ease;
 }
 
 .project-container a:hover .bg-image {
     filter: blur(10px);
+    -webkit-filter: blur(10px);
     background-size: auto 120% ;
 }
