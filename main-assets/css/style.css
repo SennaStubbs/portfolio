@@ -1,21 +1,63 @@
 /* Root variables */
 :root {
-    --background-colour: #FFF;
+    /* --background-colour: #FFF; */
+    --background-filter: none;
     --container-background-colour: #000;
-
     --text-colour: #FFF;
 
     --project-transition-time: 0.5s;
 }
 
+/* Root variables updated based on different events */
+.winter {
+    --background-filter: hue-rotate(160deg);
+    --container-background-colour: rgb(240, 255, 255);
+    --text-colour: rgb(0, 50, 70);
+}
+
+.easter {
+    --background-filter: invert(100%) hue-rotate(250deg) saturate(200%);
+    --container-background-colour: rgb(0, 30, 0);
+    --text-colour: rgb(220, 255, 180);
+}
+
+.spooky {
+    --background-filter: invert(100%) hue-rotate(140deg);
+    --container-background-colour: rgb(0, 0, 0);
+    --text-colour: rgb(255, 100, 120);
+}
+
+/* Birthday animations */
+.birthday {
+    --background-filter: hue-rotate(300deg);
+    --container-background-colour: rgb(0, 0, 0);
+    --text-colour: rgb(255, 255, 255);
+}
+
+.birthday .return img {
+    content: url(/main-assets/images/party_favicon.ico);
+}
+
+.birthday #bg {
+    animation-name: birthday;
+    animation-duration: 20s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+@keyframes birthday {
+    from {
+        filter: hue-rotate(300deg);
+    }
+    to {
+        filter: hue-rotate(660deg);
+    }
+}
+
 /* Main */
 html, body {
     /* background-color: var(--background-colour); */
-    background-image: url(/main-assets/images/google-background.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-
+    
     font-family: "Quicksand", sans-serif;
     font-optical-sizing: auto;
     font-weight: normal;
@@ -24,6 +66,31 @@ html, body {
     padding: 0;
     color: var(--text-colour);
     text-align: left;
+}
+
+html {
+    height: 100%;
+}
+
+body {
+    min-height: 100%;
+    position: relative;
+}
+
+div#bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+
+    background-image: url(/main-assets/images/google-background.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+
+    filter: var(--background-filter);
+    border: none;
 }
 
 /* Text */
@@ -54,7 +121,7 @@ p {
 }
 
 /* Return to main page */
-a.return {
+.return {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -73,7 +140,7 @@ a.return {
     -moz-transition: transform var(--project-transition-time) ease;
 }
 
-a.return:hover {
+.return:hover {
     transform: scale(1.1);
     -o-transform: scale(1.1);
     -ms-transform: scale(1.1);
@@ -81,13 +148,41 @@ a.return:hover {
     -webkit-transform: scale(1.1);
 }
 
-a.return p {
+.return p {
     margin: 0;
     padding: 0;
 }
 
-a.return img {
+.return img {
     aspect-ratio: 1;
+    width: 48px;
+}
+
+/* Page style selector */
+.style-select {
+    width: 100%;
+    height: fit-content;
+    margin: 16px 0;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.style-select label {
+    margin-right: 0.25em;
+}
+
+.style-select select {
+    color: var(--text-colour);
+    font-size: 16px;
+    text-align: center;
+
+    width: min-content;
+    background-color: var(--container-background-colour);
+
+    border: 1px solid var(--text-colour);
+    border-radius: 5px;
 }
 
 /* Content containers */
@@ -97,7 +192,10 @@ a.return img {
     min-height: 100%;
     margin: 0 auto;
 
-    background-color: var(--container-background-colour);
+    background-color: color-mix(in srgb, var(--container-background-colour) 95%, transparent);
+
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
 }
 
 .container {

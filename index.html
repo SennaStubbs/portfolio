@@ -1,6 +1,7 @@
+<!DOCTYPE html>
 <html lang="en-GB">
     <head>
-        <link rel="stylesheet" href="/main-assets/css/style.css?v=1">
+        <link rel="stylesheet" href="/main-assets/css/style.css?v=2">
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -14,17 +15,29 @@
         <meta property="og:type" content="website">
     </head>
     <body>
+        <div id="bg"></div>
         <div class="container-bg">
             <div class="container">
                 <a class="return" href="https://www.sennastubbs.com">
                     <img src="/main-assets/images/return_favicon.ico">
                     <p>Return to <strong>www.sennastubbs.com</strong></p>
+                    <img src="/main-assets/images/return_favicon.ico">
                 </a>
+                <div class="style-select">
+                    <label>Page style:</label>
+                    <select name="style" id="style">
+                        <option value="default">Default</option>
+                        <option value="winter">Winter</option>
+                        <option value="easter">Easter</option>
+                        <option value="spooky">Halloween</option>
+                        <option value="birthday">Birthday</option>
+                    </select>
+                </div>
                 <h1><strong>Senna Stubbs'</strong> Web Design Portfolio</h1>
                 <p>A portfolio of my (personal) web projects, with source code available.</p>
                 <h2>Projects Featured</h2>
                 <div class="project-container">
-                    <a href="/bean-and-brew-design/" target="_blank" draggable="false">
+                    <a href="/bean-and-brew-design/" draggable="false">
                         <h3>'Bean and Brew' Website Design</h3>
                         <ul>
                             <li>Basic JavaScript for manual offer carousel and menu categories.</li>
@@ -39,5 +52,8 @@
                 <p class="copyright">Senna Stubbs © 2024</p>
             </div>
         </div>
+
+        <!-- Script to modify CSS based on date -->
+        <script src="/main-assets/js/style_change.js"></script>
     </body>
 </html>
