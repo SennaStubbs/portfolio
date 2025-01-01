@@ -24,6 +24,7 @@
     --hyperlink-visited: #3111bf;
 }
 
+/* Easter */
 .easter {
     --background-filter: invert(100%) hue-rotate(250deg) saturate(200%);
     --container-background-colour: rgb(0, 30, 0);
@@ -34,6 +35,7 @@
     --hyperlink-visited: #058d42;
 }
 
+/* Halloween */
 .spooky {
     --background-filter: invert(100%) hue-rotate(140deg);
     --container-background-colour: rgb(0, 0, 0);
