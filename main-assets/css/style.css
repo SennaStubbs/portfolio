@@ -3,34 +3,52 @@
     /* --background-colour: #FFF; */
     --background-filter: none;
     --container-background-colour: #000;
+
     --text-colour: #FFF;
+    --hyperlink-default: #F4A900;
+    --hyperlink-hover: #F57C00;
+    --hyperlink-visited: #D52C1F;
 
     --project-transition-time: 0.5s;
 }
 
 /* Root variables updated based on different events */
+/* Winter */
 .winter {
     --background-filter: hue-rotate(160deg);
     --container-background-colour: rgb(240, 255, 255);
+
     --text-colour: rgb(0, 50, 70);
+    --hyperlink-default: #389cff;
+    --hyperlink-hover: #296cf2;
+    --hyperlink-visited: #3111bf;
 }
 
 .easter {
     --background-filter: invert(100%) hue-rotate(250deg) saturate(200%);
     --container-background-colour: rgb(0, 30, 0);
+
     --text-colour: rgb(220, 255, 180);
+    --hyperlink-default: #1fc952;
+    --hyperlink-hover: #0fb40f;
+    --hyperlink-visited: #058d42;
 }
 
 .spooky {
     --background-filter: invert(100%) hue-rotate(140deg);
     --container-background-colour: rgb(0, 0, 0);
+
     --text-colour: rgb(255, 100, 120);
+    --hyperlink-default: #ffffff;
+    --hyperlink-hover: #ffcfdb;
+    --hyperlink-visited: #dd86ff;
 }
 
 /* Birthday animations */
 .birthday {
     --background-filter: hue-rotate(300deg);
     --container-background-colour: rgb(0, 0, 0);
+
     --text-colour: rgb(255, 255, 255);
 }
 
@@ -39,13 +57,10 @@
 }
 
 .birthday #bg {
-    animation-name: birthday;
-    animation-duration: 20s;
-    animation-iteration-count: infinite;
-    animation-timing-function: linear;
+    animation: birthday-bg 20s linear infinite;
 }
 
-@keyframes birthday {
+@keyframes birthday-bg {
     from {
         filter: hue-rotate(300deg);
     }
@@ -120,6 +135,21 @@ p {
     padding: 0 32px;
 }
 
+/* Hyperlinks */
+p a:visited {
+    color: var(--hyperlink-visited);
+}
+
+p a {
+    color: var(--hyperlink-default);
+    text-decoration: none;
+    font-weight: bold;
+}
+
+p a:hover {
+    color: var(--hyperlink-hover);
+}
+
 /* Return to main page */
 .return {
     display: flex;
@@ -130,6 +160,7 @@ p {
     color: var(--text-colour);
     font-size: 20px;
     text-decoration: none;
+    text-align: center;
 
     width: fit-content;
     margin: 0 auto;
