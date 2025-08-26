@@ -1,0 +1,63 @@
+<!-- SENNA STUBBS 2025 -->
+<html>
+    <head>
+        <!-- Title page -->
+        <title>Omada APs</title>
+        <!-- Link CSS -->
+        <link rel="stylesheet" href="/ap-tracker/website/styles.css">
+    </head>
+
+    <body>
+        <!-- Main wrapper for everything above the header -->
+        <main>
+            <!-- Container for 'tags' -->
+            <div id="tags" class="tags">
+                
+            </div>
+        </main>
+        <!-- Header -->
+        <header>
+            <h1>Access Points</h1>
+            <!-- Access point counters -->
+            <ul>
+                <li class="total">{total-devices} APs</li>
+                <li class="online">{online-devices} Online</li>
+                <li class="offline">{offline-devices} Offline</li>
+            </ul>
+            <!-- When the JSON file was last updated -->
+            <p id="last-updated">Last updated: {last-updated}</p>
+            <!-- Customisation options -->
+            <div class="options">
+                <!-- Stops the auto-scrolling -->
+                <div class="stop-scroll">
+                    <label for="stop-scroll">Stop scrolling:</label>
+                    <input type="checkbox" id="stop-scroll">
+                </div>
+                <!-- Page theme customisation -->
+                <div class="style-select">
+                    <label for="style">Page style:</label>
+                    <select id="style">
+                        <option value="default">Seasonal</option>
+                        <option value="dark">Dark</option>
+                        <option value="light">Light</option>
+                        <option value="spooky">Spooky</option>
+                        <option value="winter">Winter</option>
+                    </select>
+                </div>
+            </div>
+        </header>
+
+        <!-- Tooltip when hoving an access point -->
+        <!-- Changes visibility and uses IDs to update information when hoving -->
+        <div id="tooltip">
+            <h1 id="tt-device-name">{device-name}</h1>
+            <p id="tt-device-ip">Ip: {device-ip}</p>
+            <p id="tt-device-mac">MAC: {device-mac}</p>
+            <p id="tt-device-model">Model: {device-model}</p>
+            <p id="tt-device-uptime">Uptime: {device-uptime}</p>
+        </div>
+
+        <!-- Link JavaScript -->
+        <script type="text/javascript" src="/ap-tracker/website/main.js"></script>
+    </body>
+</html>

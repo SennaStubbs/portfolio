@@ -1,0 +1,578 @@
+/* SENNA STUBBS 2025 */
+
+/* Variables */
+:root {
+    --header-height: 9vw;
+
+    /* Default (dark) theme */
+    --background-colour: black;
+    --base-colour: white;
+    
+    --online-colour: #66FF66;
+    --offline-colour: #FF3333;
+}
+
+/* Themes */
+.light {
+    --background-colour: white;
+    --base-colour: black;
+    
+    --online-colour: #32be32;
+    --offline-colour: #bd0b0b;
+}
+
+.winter {
+    --background-colour: rgb(240, 255, 255);
+    --base-colour: rgb(0, 4, 24);
+    
+    --online-colour: rgb(80 213 255);
+    /* --offline-colour: #5555FF; */
+    --offline-colour: rgb(224, 22, 231);
+}
+
+.spooky {
+    --background-colour: rgb(0, 0, 0);
+    --base-colour: rgb(255, 125, 74);
+    
+    --online-colour: #ffe866;
+    --offline-colour: #FF3333;
+}
+
+/* HTML */
+html, body {
+    background-color: var(--background-colour);
+    width: 100%;
+    height: 100vh;
+
+    padding: 0;
+    margin: 0;
+    /* margin-bottom: var(--header-height); */
+
+    font-family: 'Courier New', Courier, monospace;
+    color: var(--base-colour);
+
+    overflow: hidden;
+}
+
+/* Header */
+header {
+    display: flex;
+    position: relative;
+    height: var(--header-height);
+    background-color: var(--background-colour);
+    bottom: 0;
+    width: 100%;
+    /* max-height: 180px; */
+    z-index: 3;
+    border-top: 1px solid var(--base-colour);
+    box-sizing: border-box;
+
+    /* margin-top: 2px; */
+}
+
+/* Title */
+header h1 {
+    display: flex;
+    align-items: center;
+    margin: 0 1cqw;
+
+    font-size: 4.5cqw;
+    height: 100%;
+
+    width: min-content;
+
+    user-select: none;
+    pointer-events: none;
+}
+
+/* Device counters */
+header ul {
+    display: flex;
+    flex: 1;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-flow: column;
+
+    margin: 0.5cqw;
+    padding: 0;
+
+    font-size: 2cqw;
+    font-weight: bold;
+    list-style: none;
+}
+
+/* Total number of devices */
+header ul .total { 
+    font-size: 2.5cqw;
+}
+
+/* Number of online devices */
+header ul .online { 
+    color: var(--online-colour)
+}
+
+/* Mumber of offline devices */
+header ul .offline { 
+    color: var(--offline-colour)
+}
+
+/* Last updated */
+header p { 
+    display: flex;
+    align-items: center;
+    margin: 0.5cqw 1cqw 0.5cqw 0;
+    font-weight: bold;
+    font-size: 2cqw;
+}
+
+/* Options */
+header .options { 
+    display: flex;
+    align-items: center;
+    gap: 1cqw;
+
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    margin: 0.4cqw 1cqw;
+}
+
+header .options div {
+    display: flex;
+    align-items: center;
+    gap: 0.5cqw;
+
+    border: 1px solid var(--base-colour);
+    padding: 0.2cqw;
+
+    border-radius: 5px;
+}
+
+header .options div label {
+    user-select: none;
+}
+
+/* Stop scrolling toggle */
+header .stop-scroll label {
+    height: 100%;
+
+    font-size: 1cqw;
+}
+
+/* Checkbox */
+header .stop-scroll input {
+    margin: 0;
+    height: 1cqw;
+    aspect-ratio: 1;
+
+    accent-color: var(--base-colour);
+    color: red;
+}
+
+/* Style select */
+header .style-select label {
+    height: 100%;
+
+    font-size: 1cqw;
+}
+
+/* Dropdown */
+header .style-select select { 
+    font-size: 1cqw;
+
+    border: 1px solid var(--base-colour);
+    background-color: transparent;
+    color: var(--base-colour);
+    border-radius: 5px;
+
+    outline-style: none;
+}
+
+/* Options in dropdown */
+header .style-select select option { 
+    color: var(--base-colour);
+    background-color: var(--background-colour);
+}
+
+/* Header responsiveness */
+@media screen and (max-width: 1000px) {
+    :root {
+        --header-height: 100px;
+    }
+
+    /* Title */
+    header h1 {
+        margin: 0 10px;
+    
+        font-size: 45px;
+    }
+    
+    /* Device counters */
+    header ul { 
+        flex-flow: row;
+        flex: 1;
+        align-items: center;
+        justify-content: space-between;
+
+        margin: 10px;
+        margin-top: 15px;
+
+        font-size: 35px;
+    }
+    
+    /* Total number of devices */
+    header ul .total { 
+        font-size: 50px;
+    }
+    
+    /* Last updated */
+    header p { 
+        position: absolute;
+        right: 0;
+
+        margin: 5px 10px;
+        font-size: 20px;
+    }
+
+    /* Options */
+    header .options {
+        margin: 4px 10px;
+    }
+
+    /* Stop scrolling toggle */
+    header .stop-scroll label {
+        height: 100%;
+    
+        font-size: 15px;
+    }
+    
+    /* Checkbox */
+    header .stop-scroll input {
+        height: 15px;
+    }
+
+    /* Style select */
+    header .style-select label {
+        font-size: 15px;
+    }
+    
+    /* Dropdown */
+    header .style-select select {
+        font-size: 15px;
+    }
+}
+
+@media screen and (max-width: 900px) {
+    /* Title */
+    header h1 { 
+        position: absolute;
+
+        width: max-content;
+        height: min-content;
+
+        margin: 5px 10px;
+    
+        font-size: 25px;
+    }
+    
+    /* Device counters */
+    header ul { 
+        margin-top: 20px;
+    }
+
+    /* Last updated */
+    header p { 
+        font-size: 18px;
+    }
+}
+
+@media screen and (max-width: 650px) {
+    /* Title */
+    header h1 {
+        font-size: 16px;
+    }
+
+    /* Device counters */
+    header ul {
+        font-size: 25px;
+    }
+
+    /* Total number of devices */
+    header ul .total { 
+        font-size: 40px;
+    }
+
+    /* Last updated */
+    header p { 
+        font-size: 15px;
+    }
+}
+
+/* Container for all tags and devices */
+main {
+    z-index: 5;
+
+    display: flex;
+    height: calc(100% - var(--header-height));
+    width: 100%;
+    max-width: 100%;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Container for tag names */
+.tags {
+    position: relative;
+
+    display: flex;
+    flex-wrap: wrap;
+    
+    justify-content: center;
+    align-content: stretch;
+    gap: 12px;
+    flex-direction: row;
+
+    height: 100%;
+    width: 100%;
+    padding: 12px;
+    box-sizing: border-box;
+
+    margin-right: 3px;
+
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
+/* Scroll slider */
+.tags::-webkit-scrollbar {
+    height: 20px;
+}
+  
+.tags::-webkit-scrollbar-track {
+    background: color-mix(in srgb, var(--background-colour), var(--base-colour) 20%);
+    border-radius: 100px;
+}
+  
+.tags::-webkit-scrollbar-thumb {
+    background: var(--base-colour);
+    border-radius: 100px;
+}
+
+.tags::-webkit-scrollbar-thumb:hover {
+    background: color-mix(in srgb, var(--base-colour), black 20%);
+}
+
+.tags::-webkit-scrollbar-thumb:active {
+    background: color-mix(in srgb, var(--base-colour), black 40%);
+}
+
+.tags::-webkit-scrollbar-button:single-button {
+    background-color: transparent;
+    display: block;
+    border-style: solid;
+    height: 20px;
+    width: 100%;
+
+    border-radius: 3px;
+}
+
+/* Scroll up button */
+.tags::-webkit-scrollbar-button:vertical:decrement {
+    border-width: 0px 7px 14px 7px;
+    border-color: transparent transparent var(--base-colour) transparent;
+}
+
+.tags::-webkit-scrollbar-button:vertical:decrement:hover {
+    border-color: transparent transparent color-mix(in srgb, var(--base-colour), black 20%) transparent;
+}
+
+.tags::-webkit-scrollbar-button:vertical:decrement:active {
+    border-color: transparent transparent color-mix(in srgb, var(--base-colour), black 40%) transparent;
+}
+
+
+/* Scroll down button */
+.tags::-webkit-scrollbar-button:vertical:increment {
+    border-width: 14px 7px 0px 7px;
+    border-color: var(--base-colour) transparent transparent transparent;
+}
+
+.tags::-webkit-scrollbar-button:vertical:increment:hover {
+    border-color: color-mix(in srgb, var(--base-colour), black 20%) transparent transparent transparent;
+}
+
+.tags::-webkit-scrollbar-button:vertical:increment:active {
+    border-color: color-mix(in srgb, var(--base-colour), black 40%) transparent transparent transparent;
+}
+
+/* Individual tags */
+.tag {
+    display: flex;
+    flex: 1 1;
+    flex-direction: column;
+    width: fit-content;
+    height: auto;
+    min-height: 100px;
+    position: relative;
+
+    background-color: var(--background-colour);
+    border: 1px solid var(--base-colour);
+    border-radius: 5px;
+
+    box-shadow: 0px 2px 0px var(--base-colour);
+}
+
+/* Tag header */
+.tag .header {
+    flex: 1 1 1;
+    flex-basis: content;
+    min-width: 100px;
+    min-height: 40px;
+    margin: 0;
+    border-bottom: 1px solid var(--base-colour);
+    box-sizing: border-box;
+    overflow: hidden;
+    display: flex;
+}
+
+.tag .header div {
+    margin: 0 10px;
+    height: 100%;
+    width: fit-content;
+    
+    font-size: 30px;
+    font-weight: bold;
+    align-content: center;
+}
+
+/* Counters in the tag name header */
+.tag .header .counter {
+    font-size: 20px;
+}
+
+/* Devices container in the tag */
+.devices {
+    display: flex;
+    height: 100%;
+    flex: 1;
+    position: relative;
+    flex-wrap: wrap;
+    padding: 10px;
+    justify-content: left;
+    align-content: flex-start;
+    gap: 5px;
+    border-top: 1px solid var(--base-colour);
+    box-sizing: content-box;
+    overflow: hidden;
+}
+
+/* Individual devices in a tag */
+.device {
+    width: 16px;
+    height: 16px;
+    max-width: 20px;
+    max-height: 20px;
+    background-color: var(--base-colour);
+    border: 0;
+    box-sizing: border-box;
+    border-radius: 100%;
+    position: relative;
+}
+
+/* Tooltip */
+#tooltip {
+    z-index: 100;
+
+    display: none;
+
+    position: absolute;
+    top: 0;
+    left: 0;
+
+
+    background-color: var(--background-colour);
+
+    width: max-content;
+    height: max-content;
+
+    border: 1px solid var(--base-colour);
+    border-radius: 5px;
+    box-sizing: border-box;
+
+    box-shadow: 0px 2px 0px var(--base-colour);
+
+    user-select: none;
+    pointer-events: none;
+}
+
+/* Device name */
+#tooltip h1 {
+    width: 100%;
+    margin: 0;
+    padding: 0 5px;
+
+    border-bottom: 2px solid var(--base-colour);
+    box-sizing: border-box;
+}
+
+/* Device data */
+#tooltip p {
+    width: 100%;
+    margin: 3px;
+}
+
+/* Online visuals */
+/* Devices */
+.device.online {
+    background-color: var(--online-colour);
+    border: 0;
+}
+
+/* Tooltip */
+#tooltip.online {
+    border-color: var(--online-colour);
+    box-shadow: 0px 2px 0px var(--online-colour);
+    color: var(--online-colour);
+}
+
+#tooltip.online h1 {
+    border-color: var(--online-colour);
+}
+
+/* Offline visuals */
+/* Devices */
+.device.offline {
+    background-color: var(--offline-colour);
+    border: 0;
+}
+
+/* Tags */
+.tag.offline {
+    border-color: var(--offline-colour);
+    box-shadow: 0px 2px 0px var(--offline-colour);
+    color: var(--offline-colour);
+}
+
+.tag.offline .header {
+    border-color: 1px solid var(--offline-colour);
+}
+
+.tag.offline .devices {
+    border-color: 1px solid var(--offline-colour);
+}
+
+/* Tooltip */
+#tooltip.offline {
+    border-color: var(--offline-colour);
+    box-shadow: 0px 2px 0px var(--offline-colour);
+    color: var(--offline-colour);
+}
+
+#tooltip.offline h1 {
+    border-color: var(--offline-colour);
+}
+
+/* Hide uptime for offline devices */
+#tooltip.offline #tt-device-uptime {
+    display: none;
+}
