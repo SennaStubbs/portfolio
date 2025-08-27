@@ -71,6 +71,10 @@
     animation: birthday-bg 20s linear infinite;
 }
 
+.birthday a {
+    animation: birthday-bg 20s linear infinite;
+}
+
 @keyframes birthday-bg {
     from {
         filter: hue-rotate(300deg);
