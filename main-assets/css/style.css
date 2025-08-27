@@ -1,5 +1,6 @@
 /* Root variables */
 :root {
+    /* Default (dark) theme */
     /* --background-colour: #FFF; */
     --background-filter: none;
     --container-background-colour: #000;
@@ -12,7 +13,15 @@
     --project-transition-time: 0.5s;
 }
 
-/* Root variables updated based on different events */
+/* Colour styles for the page */
+
+/* Light */
+.light {
+    --container-background-colour: rgb(240, 255, 255);
+
+    --text-colour: black;
+}
+
 /* Winter */
 .winter {
     --background-filter: hue-rotate(160deg);
@@ -102,14 +111,15 @@ div#bg {
     height: 100%;
 
     background-image: url(/main-assets/images/google-background.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
+    background-repeat: repeat;
+    /* background-size: cover; */
+    /* background-position: center; */
 
     filter: var(--background-filter);
     border: none;
 }
 
+/* DEFINITELY REPLACE THESE WITH CLASSES INSTEAD AT SOME POINT */
 /* Text */
 h1 {
     font-weight: normal;
@@ -138,17 +148,18 @@ p {
 }
 
 /* Hyperlinks */
-p a:visited {
+a:visited {
     color: var(--hyperlink-visited);
 }
 
-p a {
+a {
     color: var(--hyperlink-default);
     text-decoration: none;
     font-weight: bold;
+    transition: color 0.2s ease;
 }
 
-p a:hover {
+a:hover {
     color: var(--hyperlink-hover);
 }
 
@@ -159,7 +170,7 @@ p a:hover {
     justify-content: center;
     gap: 10px;
 
-    color: var(--text-colour);
+    color: var(--text-colour) !important;
     font-size: 20px;
     text-decoration: none;
     text-align: center;
@@ -181,11 +192,13 @@ p a:hover {
     -webkit-transform: scale(1.1);
 }
 
+/* Return text */
 .return p {
     margin: 0;
     padding: 0;
 }
 
+/* Return image */
 .return img {
     aspect-ratio: 1;
     width: 48px;
@@ -234,9 +247,9 @@ p a:hover {
 .container {
     max-width: 1012px;
     margin: 0 auto;
-    padding: 16px 16px 16px 16px;
+    padding: 16px 16px 51px 16px;
 
-    min-height: calc(100vh - 32px);
+    min-height: calc(100vh - 67px);
 
     position: relative;
 }
@@ -247,7 +260,7 @@ p.copyright {
     width: calc(100% - 32px);
 
     margin: 0;
-    padding: 1em 0;
+    padding: 16px 0;
     
     color: color-mix(in srgb, var(--text-colour), transparent 65%);;
 
@@ -257,6 +270,7 @@ p.copyright {
     text-align: center;
 }
 
+/* Grid (not in use right now) */
 /* Project container */
 .project-container {
     display: grid;
@@ -416,4 +430,113 @@ p.copyright {
     filter: blur(10px);
     -webkit-filter: blur(10px);
     background-size: auto 120% ;
+}
+
+/* Project list */
+.project-list {
+    display: flex;
+    flex-direction: column;
+
+    padding: 20px 0;
+    gap: 30px;
+
+    border-top: 2px solid color-mix(in srgb, var(--text-colour), transparent 90%);
+}
+
+/* Individual projects */
+.project-list .project {
+    margin: 0 30px;
+    padding: 10px;
+
+    color: var(--text-colour);
+    text-decoration: none;
+    text-align: left;
+
+    background-color: color-mix(in srgb, var(--text-colour) 5%, transparent);
+    box-shadow: 0px 0px 6px 6px color-mix(in srgb, var(--text-colour) 5%, transparent);
+
+    border: none;
+    border-radius: 10px;
+
+    transition: transform .3s ease,
+                background-color .3s ease,
+                box-shadow .3s ease;
+}
+
+.project-list .project:hover {
+    transform: scale(1.02);
+
+    background-color: color-mix(in srgb, var(--text-colour) 10%, transparent);
+    box-shadow: none;
+
+    cursor: pointer;
+}
+
+/* Project name */
+.project-list .project h3 {
+    margin: 0 0 0px 0;
+
+    text-align: center;
+    font-size: 30px;
+}
+
+/* Click hint - shows when hovering project */
+.project-list .project .click-hint {
+
+    color: transparent;
+    text-align: center;
+    font-size: 20px;
+    font-weight: normal;
+
+    transition: color .3s ease;
+}
+
+.project-list .project:hover .click-hint {
+    color: color-mix(in srgb, var(--text-colour) 30%, transparent);
+}
+
+/* Project description */
+.project-list .project p {
+    margin: 0 20px;
+    padding: 0;
+
+    font-size: 18px;
+}
+
+/* Project GitHub link */
+.project-list .project .github {
+    display: block;
+    width: fit-content;
+
+    margin: -16px auto 10px auto;
+    padding: 0 0;
+    box-sizing: border-box;
+
+    font-size: 22px;
+
+    transition: margin .3s ease,
+                color 0.2s ease;
+}
+
+/* Move GitHub link when hovering to make room for the click hint */
+.project-list .project:hover .github {
+    margin: 5px auto 10px auto;
+}
+
+/* Project notes */
+.project-list .project h4 {
+    margin: 20px 20px 5px 20px;
+    /* text-decoration: underline; */
+    font-size: 20px;
+}
+
+.project-list .project ul {
+    margin: 0 20px;
+
+    font-size: 18px;
+}
+
+/* Nested lists */
+.project-list .project ul ul {
+    padding: 0;
 }

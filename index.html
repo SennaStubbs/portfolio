@@ -20,13 +20,15 @@
             <div class="container">
                 <a class="return" href="https://www.sennastubbs.com">
                     <img src="/main-assets/images/return_favicon.ico">
-                    <p>Return to <strong>www.sennastubbs.com</strong></p>
+                    <p>Return to <strong>sennastubbs.com</strong></p>
                     <img src="/main-assets/images/return_favicon.ico">
                 </a>
                 <div class="style-select">
                     <label>Page style:</label>
                     <select name="style" id="style">
                         <option value="default">Default</option>
+                        <option value="dark">Dark</option>
+                        <option value="light">Light</option>
                         <option value="winter">Winter</option>
                         <option value="easter">Easter</option>
                         <option value="spooky">Halloween</option>
@@ -34,9 +36,9 @@
                     </select>
                 </div>
                 <h1><strong>Senna Stubbs'</strong> Web Design Portfolio</h1>
-                <p>A portfolio of my (personal) web projects, with source code available on <a href="https://github.com/SennaStubbs/portfolio">GitHub</a>.</p>
-                <h2>Projects Featured</h2>
-                <div class="project-container">
+                <p>A portfolio of my (personal) web projects, with source code available on <a href="https://github.com/SennaStubbs/portfolio" target="_blank">GitHub</a>.</p>
+                <!-- <h2>Projects Featured</h2> --> <!-- buttons here to change between grid and list -->
+                <!-- <div class="project-container">
                     <a href="/bean-and-brew-design/" draggable="false">
                         <h3>'Bean and Brew' Website Design</h3>
                         <ul>
@@ -48,12 +50,100 @@
                             <div class="overlay" style="background-image: linear-gradient(to top, #F2E3CD, #151412);"></div>
                         </div>
                     </a>
+                    <a href="/ap-tracker/" draggable="false">
+                        <h3>Access Point Tracker</h3>
+                        <ul>
+                            <li>Displays a set of JSON data from Omada
+                                <ul>
+                                    <li>Test data is included</li>
+                                    <li>A generator for unique test data, made in Python</li>
+                                </ul>
+                            </li>
+                            <li>Tooltip to display more data</li>
+                            <li>Page themes
+                                <ul>
+                                    <li>Cached</li>
+                                </ul>
+                            </li>
+                            <li>Auto scrolling that can be toggled
+                                <ul>
+                                    <li>Cached</li>
+                                </ul>
+                            </li>
+                        </ul>
+                        <div class="bg-image" style="background-image: url(/ap-tracker/thumbnail.png);">
+                            <div class="overlay" style="background-image: linear-gradient(to top, #F2E3CD, #151412);"></div>
+                        </div>
+                    </a>
+                </div> -->
+                <div class="project-list">
+                    <button class="project" onclick="ClickLink(event, '/bean-and-brew-design/', true)">
+                        <h3>'Bean and Brew' Website Design</h3>
+                        <p class="click-hint">(Click to open web design)</p>
+                        <a class="github" href="https://github.com/SennaStubbs/portfolio/tree/main/bean-and-brew-design" target="_blank">GitHub</a>
+                        <p>A website design made for an assignment for a 'Digital Design and Development' college course.</p>
+                        <h4>Key Notes</h4>
+                        <ul>
+                            <li>Basic JavaScript for manual offer carousel and menu categories.</li>
+                            <li>Solid visualisation for how a checkout, sign in and sign up, and offers pages could be linked to some kind of database.</li>
+                            <li style="list-style-type: circle">Lacks responsiveness.</li>
+                        </ul>
+                        <h4>Associated Blog Post</h4>
+                        <ul>
+                            <li>
+                                <a href="https://www.sennastubbs.com/2024/12/bean-brew-basic-website-design.html" target="_blank">
+                                    'Bean & Brew' Website Design
+                                </a> - December 9th, 2024
+                            </li>
+                        </ul>
+                    </button>
+                    <button class="project" onclick="ClickLink(event, '/ap-tracker/', true)">
+                        <h3>Access Point Tracker</h3>
+                        <p class="click-hint">(Click to open web design)</p>
+                        <a class="github" href="https://github.com/SennaStubbs/portfolio/tree/main/ap-tracker" target="_blank">GitHub</a>
+                        <p>
+                            An interface to display data from access points. A python script is included that uses
+                            the <a href="https://use1-omada-northbound.tplinkcloud.com/doc.html#/home">Omada Open API</a>
+                            to retrieve all devices and get the relevant data from access points to be formatted into JSON
+                            and read by this website.
+                        </p>
+                        <h4>Key Notes</h4>
+                        <ul>
+                            <li>Displays a set of JSON data from Omada
+                                <ul>
+                                    <li>Python script to retrieve data Omada is included</li>
+                                    <li>Test data is included</li>
+                                    <li>A generator for unique test data, made in Python</li>
+                                </ul>
+                            </li>
+                            <li>Tooltip to display more data</li>
+                            <li>Page themes
+                                <ul>
+                                    <li>Cached</li>
+                                </ul>
+                            </li>
+                            <li>Auto scrolling that can be toggled
+                                <ul>
+                                    <li>Cached</li>
+                                </ul>
+                            </li>
+                        </ul>
+                        <h4>Associated Blog Posts</h4>
+                        <ul>
+                            <li>
+                                <a href="https://www.sennastubbs.com/2024/12/developing-access-point-tracker-using.html" target="_blank">
+                                    Developing an 'Access Point Tracker' using Omada Open API
+                                </a> - December 10th, 2024
+                            </li>
+                            <li>New blog post coming soon!</li>
+                        </ul>
+                    </button>
                 </div>
-                <p class="copyright">Senna Stubbs © 2024</p>
+                <p class="copyright">Senna Stubbs © 2025</p>
             </div>
         </div>
 
-        <!-- Script to modify CSS based on date -->
-        <script src="/main-assets/js/style_change.js"></script>
+        <!-- Link JavaScript -->
+        <script src="/main-assets/js/main.js"></script>
     </body>
 </html>
